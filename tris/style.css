@@ -1,0 +1,25 @@
+:root {
+  --cell-size: 100px;
+  --cell-gutter: 5px;
+}
+
+.grid {
+  display: grid;
+  grid: repeat(3, 3fr) / repeat(3, 3fr);
+  gap: var(--cell-gutter);
+}
+
+.cell {
+  height: var(--cell-size);
+  width: var(--cell-size);
+  border: 3px solid white;
+
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell:hover {
+  cursor: pointer;
+}
