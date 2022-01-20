@@ -37,7 +37,7 @@ h1 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 16px;
 }
 
@@ -87,6 +87,7 @@ img {
 
 .game-data {
   padding: 12px;
+  margin-bottom: 1rem;
 }
 
 /* Mobile */
@@ -95,7 +96,11 @@ img {
   .container {
     width: 90%;
     margin: 0 auto;
-    padding-top: 6rem;
+    padding-top: 4rem;
+  }
+
+  .container.game {
+    padding-top: 1rem;
   }
 
   .container img:nth-child(2) {
