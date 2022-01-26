@@ -1,4 +1,4 @@
-# JS Arcade Games
+# Arcade Games
 
 Arcade Games made with Vanilla JavaScript.
 
@@ -6,3 +6,7 @@ Arcade Games made with Vanilla JavaScript.
 
 - [ ] Sound effect
 - [ ] Favicon
+
+## Notes
+
+- https://css-tricks.com/grainy-gradients/

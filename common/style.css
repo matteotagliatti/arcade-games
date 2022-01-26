@@ -73,9 +73,21 @@ img {
   align-items: center;
 }
 
+.text-small {
+  font-size: 0.7rem;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 /* Margin, Padding */
 
-.mb-3 {
+.mb1 {
+  margin-bottom: 1rem;
+}
+
+.mb3 {
   margin-bottom: 3rem;
 }
 
