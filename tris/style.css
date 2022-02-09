@@ -3,13 +3,13 @@
   --cell-gutter: 5px;
 }
 
-.grid {
+.tris.grid {
   display: grid;
   grid: repeat(3, 3fr) / repeat(3, 3fr);
   gap: var(--cell-gutter);
 }
 
-.cell {
+.tris .cell {
   height: var(--cell-size);
   width: var(--cell-size);
   border: 3px solid white;
@@ -20,6 +20,6 @@
   justify-content: center;
 }
 
-.cell:hover {
+.tris .cell:hover {
   cursor: pointer;
 }
