@@ -1,10 +1,13 @@
 :root {
   --card-size: 150px;
+  --mobile-card-size: 100px;
 }
 
 .memory.grid {
   height: calc(var(--card-size) * 3);
   width: calc(var(--card-size) * 4);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .memory .card {
@@ -15,10 +18,40 @@
   background-size: contain;
 }
 
+.memory .alien {
+  background-image: url("img/alien.png");
+}
+
+.memory .bug {
+  background-image: url("img/bug.png");
+}
+
+.memory .duck {
+  background-image: url("img/duck.png");
+}
+
+.memory .rocket {
+  background-image: url("img/rocket.png");
+}
+
+.memory .spaceship {
+  background-image: url("img/spaceship.png");
+}
+
+.memory .ticktac {
+  background-image: url("img/tiktac.png");
+}
+
 /* Mobile */
 
 @media screen and (max-width: 700px) {
   .memory.grid {
-    width: calc(var(--card-size) * 2);
+    height: calc(var(--mobile-card-size) * 4);
+    width: calc(var(--mobile-card-size) * 3);
+  }
+
+  .memory .card {
+    width: var(--mobile-card-size);
+    height: var(--mobile-card-size);
   }
 }
