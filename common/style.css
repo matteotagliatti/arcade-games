@@ -99,11 +99,31 @@ img {
 
 .game-area {
   padding: 12px;
+  position: relative;
 }
 
 .game-data {
   padding: 12px;
   margin-bottom: 1rem;
+}
+
+/* Alert */
+
+.game-alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-alert-message {
+  font-size: 1.2rem;
+  padding: 20px;
+  background-color: var(--pink);
 }
 
 /* Mobile */

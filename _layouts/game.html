@@ -9,13 +9,13 @@
   <body>
     <div class="container game">
       <div class="game-data">
-        <a class="text-small inline-block mb1" href="/index.html">&lt;&lt; back</a>
+        <a class="text-small inline-block mb1" href="/index.html"
+          >&lt;&lt; back</a
+        >
         <h1>{{ page.title }}</h1>
         <p>{{ page.description }}</p>
       </div>
-      <div class="game-area">
-        {{ content }}
-      </div>
+      <div class="game-area">{{ content }}</div>
     </div>
 
     {% include footer.html %}
