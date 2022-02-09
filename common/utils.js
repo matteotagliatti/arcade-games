@@ -1,5 +1,10 @@
 const reload = document.getElementById("reload");
 
+/* Reload the page */
+reload.addEventListener("click", function () {
+  window.location.reload();
+});
+
 function showMessage(message) {
   const gameArea = document.querySelector(".game-area");
 
@@ -11,8 +16,3 @@ function showMessage(message) {
 
   gameArea.innerHTML = gameArea.innerHTML + alertMessage;
 }
-
-/* Reload the page */
-reload.addEventListener("click", function () {
-  window.location.reload();
-});
