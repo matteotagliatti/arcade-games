@@ -1,0 +1,24 @@
+:root {
+  --card-size: 150px;
+}
+
+.memory.grid {
+  height: calc(var(--card-size) * 3);
+  width: calc(var(--card-size) * 4);
+}
+
+.memory .card {
+  width: var(--card-size);
+  height: var(--card-size);
+  background-image: url("img/back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 700px) {
+  .memory.grid {
+    width: calc(var(--card-size) * 2);
+  }
+}
