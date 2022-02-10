@@ -1,3 +1,6 @@
 <script src="{{ 'common/utils.js' | relative_url}}"></script>
+{% if page.title == 'Tris' %}
 <script src="{{ 'tris/script.js' | relative_url}}"></script>
+{% endif %} {% if page.title == 'Memory' %}
 <script src="{{ 'memory/script.js' | relative_url}}"></script>
+{% endif %}

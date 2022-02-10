@@ -16,6 +16,7 @@
   background-image: url("img/back.png");
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 
 .memory .alien {

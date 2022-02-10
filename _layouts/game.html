@@ -9,12 +9,21 @@
   <body>
     <div class="container game">
       <div class="game-data">
-        <a
-          class="text-small inline-block mb1"
-          href="{{ 'index.html' | relative_url }}"
-          >&lt;&lt; back</a
-        >
-        <a id="reload" class="text-small inline-block mb1" href="#"> reload</a>
+        <div class="game-header">
+          <a
+            class="text-small inline-block mb1"
+            href="{{ 'index.html' | relative_url }}"
+            >&lt;&lt; back</a
+          >
+          <a id="reload" class="text-small inline-block mb1" href="#">
+            reload</a
+          >
+          {% if page.title == 'Memory' %}
+          <p class="text-small inline-block mb1">
+            error: <span class="text-pink" id="error"></span>
+          </p>
+          {% endif %}
+        </div>
         <h1>{{ page.title }}</h1>
         <p>{{ page.description }}</p>
       </div>

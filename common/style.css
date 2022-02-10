@@ -85,6 +85,10 @@ img {
   vertical-align: middle;
 }
 
+.text-pink {
+  color: var(--pink);
+}
+
 /* Margin, Padding */
 
 .mb1 {
@@ -105,6 +109,11 @@ img {
 .game-data {
   padding: 12px;
   margin-bottom: 1rem;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Alert */
