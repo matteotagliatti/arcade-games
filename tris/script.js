@@ -27,9 +27,9 @@ for (let i = 0; i < cells.length; i++) {
     let hasWon = checkVictory();
 
     if (hasWon) {
-      showMessage(`${sign} ha vinto!`);
+      showMessage(`${sign} has win!`);
     } else if (turn === 9) {
-      showMessage(`Pareggio!`);
+      showMessage(`Draw!`);
     }
   });
 }
