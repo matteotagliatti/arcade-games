@@ -1,0 +1,38 @@
+:root {
+  --cell-size: 120px;
+  --cell-gutter: 60px;
+  --mobile-cell-size: 85px;
+  --mobile-cell-gutter: 15px;
+}
+
+.whackabug.score-time {
+  display: flex;
+  flex-direction: column;
+}
+
+.whackabug.grid {
+  height: calc(var(--cell-size) * 3 + var(--cell-gutter));
+  width: calc(var(--cell-size) * 3 + var(--cell-gutter));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.whackabug .cell {
+  height: var(--cell-size);
+  width: var(--cell-size);
+  background-color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .whackabug.grid {
+    height: calc(var(--mobile-cell-size) * 3 + var(--mobile-cell-gutter));
+    width: calc(var(--mobile-cell-size) * 3 + var(--mobile-cell-gutter));
+  }
+
+  .whackabug .cell {
+    height: var(--mobile-cell-size);
+    width: var(--mobile-cell-size);
+  }
+}

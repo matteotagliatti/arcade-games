@@ -22,6 +22,16 @@
           <p class="text-small inline-block mb1">
             error: <span class="text-pink" id="error"></span>
           </p>
+          {% endif %} {% if page.title == 'Whack a bug' %}
+          <div class="whackabug score-time">
+            <p class="text-small inline-block">
+              Time: <span class="text-pink" id="timer-display">0</span>
+            </p>
+            <p class="text-small inline-block">
+              Score: <span class="text-pink" id="score-display">0</span>
+            </p>
+          </div>
+
           {% endif %}
         </div>
         <h1>{{ page.title }}</h1>
