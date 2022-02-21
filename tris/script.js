@@ -27,7 +27,7 @@ for (let i = 0; i < cells.length; i++) {
     let hasWon = checkVictory();
 
     if (hasWon) {
-      showMessage(`${sign} has win!`);
+      showMessage(`${sign} won!`);
     } else if (turn === 9) {
       showMessage(`Draw!`);
     }
