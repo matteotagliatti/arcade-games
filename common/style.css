@@ -116,6 +116,11 @@ img {
   justify-content: space-between;
 }
 
+.score-time {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Alert */
 
 .game-alert {

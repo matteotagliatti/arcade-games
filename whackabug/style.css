@@ -5,11 +5,6 @@
   --mobile-cell-gutter: 15px;
 }
 
-.whackabug.score-time {
-  display: flex;
-  flex-direction: column;
-}
-
 .whackabug.grid {
   height: calc(var(--cell-size) * 3 + var(--cell-gutter));
   width: calc(var(--cell-size) * 3 + var(--cell-gutter));
