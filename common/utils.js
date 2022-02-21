@@ -1,10 +1,11 @@
+/* Reload the page */
 const reload = document.getElementById("reload");
 
-/* Reload the page */
 reload.addEventListener("click", function () {
   window.location.reload();
 });
 
+/* Show Message to the user */
 function showMessage(message) {
   const gameArea = document.querySelector(".game-area");
 
