@@ -10,6 +10,10 @@
 />
 
 <link rel="stylesheet" href="{{ 'common/style.css' | relative_url }}" />
+{% if page.title == 'Tris' %}
 <link rel="stylesheet" href="{{ 'tris/style.css' | relative_url }}" />
+{% endif %} {% if page.title == 'Memory' %}
 <link rel="stylesheet" href="{{ 'memory/style.css' | relative_url }}" />
+{% endif %} {% if page.title == 'Whack a bug' %}
 <link rel="stylesheet" href="{{ 'whackabug/style.css' | relative_url }}" />
+{% endif %}
