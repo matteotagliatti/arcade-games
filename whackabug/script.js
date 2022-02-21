@@ -4,7 +4,7 @@ const timerDisplay = document.getElementById("timer-display");
 const cells = document.querySelectorAll(".cell");
 
 let score = 0;
-let timeLeft = 3;
+let timeLeft = 30;
 
 scoreDisplay.innerText = score;
 timerDisplay.innerText = timeLeft;
