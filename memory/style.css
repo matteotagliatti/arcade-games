@@ -45,7 +45,7 @@
 
 /* Mobile */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .memory.grid {
     height: calc(var(--mobile-card-size) * 4);
     width: calc(var(--mobile-card-size) * 3);
