@@ -19,11 +19,16 @@
   background-position: center;
 }
 
-.duck {
+.running-duck .duck {
   background-image: url("img/duck.png");
+  transition: transform 0.2s;
 }
 
-.plant {
+.running-duck .duck-jump {
+  transform: translateY(-120%);
+}
+
+.running-duck .plant {
   background-image: url("img/plant.png");
 }
 
