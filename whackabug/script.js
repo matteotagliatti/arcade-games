@@ -15,6 +15,10 @@ let bugSpeed = 600;
 /* Random Bug */
 function randomBug() {
   removeBug();
+  /* Change speed when score is 5 */
+  if (score === 5) {
+    bugSpeed = bugSpeed / 2;
+  }
   const randomNumber = Math.floor(Math.random() * cells.length);
   const cell = cells[randomNumber];
   cell.classList.add("bug");
