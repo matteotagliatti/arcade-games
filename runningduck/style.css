@@ -1,0 +1,40 @@
+:root {
+  --size: 60px;
+  --mobile-size: 37px;
+}
+
+.running-duck.grid {
+  width: calc(var(--size) * 10);
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 3px solid white;
+}
+
+.running-duck div {
+  width: var(--size);
+  height: var(--size);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.duck {
+  background-image: url("img/duck.png");
+}
+
+.plant {
+  background-image: url("img/plant.png");
+}
+
+@media screen and (max-width: 700px) {
+  .running-duck.grid {
+    width: calc(var(--mobile-size) * 10);
+    height: 100px;
+  }
+
+  .running-duck div {
+    width: var(--mobile-size);
+    height: var(--mobile-size);
+  }
+}
