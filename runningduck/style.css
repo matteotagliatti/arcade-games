@@ -28,7 +28,7 @@
   transform: translateY(-120%);
 }
 
-.running-duck .plant {
+.running-duck .plant:not(.duck) {
   background-image: url("img/plant.png");
 }
 
