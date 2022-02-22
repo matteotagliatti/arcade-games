@@ -1,0 +1,48 @@
+:root {
+  --cell-size: 35px;
+  --mobile-cell-size: 25px;
+  --grid-size: 15;
+}
+
+.space-invaders.grid {
+  width: calc(var(--cell-size) * var(--grid-size));
+  height: calc(var(--cell-size) * var(--grid-size));
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.space-invaders div {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.space-invaders .alien {
+  background-image: url(img/alien.png);
+}
+
+.space-invaders .spaceship {
+  background-image: url(img/spaceship.png);
+}
+
+.space-invaders .laser {
+  background-image: url(img/laser.png);
+}
+
+.space-invaders .boom {
+  background-image: url(img/boom.png);
+}
+
+@media screen and (max-width: 800px) {
+  .space-invaders.grid {
+    width: calc(var(--mobile-cell-size) * var(--grid-size));
+    height: calc(var(--mobile-cell-size) * var(--grid-size));
+  }
+
+  .space-invaders div {
+    width: var(--mobile-cell-size);
+    height: var(--mobile-cell-size);
+  }
+}
