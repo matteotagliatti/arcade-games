@@ -9,6 +9,8 @@
   type="image/x-icon"
 />
 
+<meta property="og:image" content="{{ 'screen.png' | relative_url }}" />
+
 <link rel="stylesheet" href="{{ 'common/style.css' | relative_url }}" />
 {% if page.title == 'Tris' %}
 <link rel="stylesheet" href="{{ 'tris/style.css' | relative_url }}" />
@@ -18,4 +20,6 @@
 <link rel="stylesheet" href="{{ 'whackabug/style.css' | relative_url }}" />
 {% endif %} {% if page.title == 'Running Duck' %}
 <link rel="stylesheet" href="{{ 'runningduck/style.css' | relative_url }}" />
+{% endif %} {% if page.title == 'Space Invaders' %}
+<link rel="stylesheet" href="{{ 'spaceinvaders/style.css' | relative_url }}" />
 {% endif %}
