@@ -2,4 +2,6 @@
 
 ![screen](screen.png)
 
-Arcade Games made with Vanilla JavaScript. Structure of the website made with [Jekyll](https://jekyllrb.com/). The website is developed with a Mobile First approach. Design by Me. Logo made with Photoshop.
+Arcade Games made with Vanilla JavaScript. Structure of the website made with [Jekyll](https://jekyllrb.com/).
+
+Design by Me. Logo made with Photoshop.
