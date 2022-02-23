@@ -9,11 +9,30 @@ const aliens = [
 ];
 const aliensKilled = [];
 
+let alienMoveIntVal = null;
+
 /* Create Cells */
 for (let i = 0; i < rxc; i++) {
   const cell = document.createElement("div");
   cells.push(cell);
   grid.appendChild(cell);
+}
+
+/* Win or Lose */
+function checkForHumanWin() {
+  if (aliensKilled.length === aliens.length) {
+    showMessage("HUMAN WINS");
+    clearInterval(alienMoveIntVal);
+  }
+}
+
+function checkForAlienWin() {
+  for (let i = 0; i < aliens.length; i++) {
+    if (!aliensKilled.includes(aliens[i]) && aliens[i] >= spaceshipIndex) {
+      showMessage("ALIEN WINS");
+      clearInterval(alienMoveIntVal);
+    }
+  }
 }
 
 /* ALIENS */
@@ -61,10 +80,12 @@ function moveAliens() {
   for (let i = 0; i < aliens.length; i++) {
     aliens[i] = aliens[i] + step;
   }
+
+  checkForAlienWin();
   drawAliens();
 }
 
-setInterval(moveAliens, 500);
+alienMoveIntVal = setInterval(moveAliens, 100);
 
 /* 
   SPACESHIP
@@ -117,6 +138,8 @@ function shoot(event) {
 
       const killed = aliens.indexOf(laserIndex);
       aliensKilled.push(killed);
+
+      checkForHumanWin();
 
       return;
     }
