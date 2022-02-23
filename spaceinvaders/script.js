@@ -84,3 +84,28 @@ function moveSpaceship(event) {
 }
 
 document.addEventListener("keydown", moveSpaceship);
+
+/* Shoot */
+
+function shoot(event) {
+  if (event.code !== "Space") return;
+
+  let laserIndex = spaceshipIndex;
+  let laserIntVal = null;
+
+  function moveLaser() {
+    cells[laserIndex].classList.remove("laser");
+    laserIndex = laserIndex - 15;
+
+    if (laserIndex < 0) {
+      clearInterval(laserIntVal);
+      return;
+    }
+
+    cells[laserIndex].classList.add("laser");
+  }
+
+  laserIntVal = setInterval(moveLaser, 200);
+}
+
+document.addEventListener("keydown", shoot);
