@@ -85,7 +85,7 @@ function moveAliens() {
   drawAliens();
 }
 
-alienMoveIntVal = setInterval(moveAliens, 100);
+alienMoveIntVal = setInterval(moveAliens, 500);
 
 /* 
   SPACESHIP
