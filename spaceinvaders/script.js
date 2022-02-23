@@ -12,6 +12,7 @@ for (let i = 0; i < rxc; i++) {
   grid.appendChild(cell);
 }
 
+/* ALIENS */
 function drawAliens() {
   for (let i = 0; i < aliens.length; i++) {
     cells[aliens[i]].classList.add("alien");
@@ -28,7 +29,7 @@ let step = 1; // number of movement of the aliens
 let direction = "forward";
 
 function moveAliens() {
-  const leftEdge = aliens[0] % size === 0;
+  const leftEdge = aliens[0] % size === 0; // express a if condition. When correct const leftEdge is true.
   const rightEdge = aliens[aliens.length - 1] % size === size - 1;
 
   removeAliens();
@@ -58,3 +59,28 @@ function moveAliens() {
 }
 
 setInterval(moveAliens, 500);
+
+/* 
+  SPACESHIP
+  Move
+*/
+
+let spaceshipIndex = 217;
+cells[spaceshipIndex].classList.add("spaceship");
+
+function moveSpaceship(event) {
+  const leftEdge = spaceshipIndex % size === 0;
+  const rightEdge = spaceshipIndex % size === 14;
+
+  cells[spaceshipIndex].classList.remove("spaceship");
+
+  if (event.code === "ArrowLeft" && !leftEdge) {
+    spaceshipIndex--;
+  } else if (event.code === "ArrowRight" && !rightEdge) {
+    spaceshipIndex++;
+  }
+
+  cells[spaceshipIndex].classList.add("spaceship");
+}
+
+document.addEventListener("keydown", moveSpaceship);
