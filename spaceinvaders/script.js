@@ -3,7 +3,11 @@ const size = 15;
 const rxc = size * size; // row * column
 const cells = [];
 
-const aliens = [0, 1, 2, 3, 4, 5];
+const aliens = [
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 30, 31,
+  32, 33, 34, 35, 36, 37, 38, 39,
+];
+const aliensKilled = [];
 
 /* Create Cells */
 for (let i = 0; i < rxc; i++) {
@@ -15,7 +19,9 @@ for (let i = 0; i < rxc; i++) {
 /* ALIENS */
 function drawAliens() {
   for (let i = 0; i < aliens.length; i++) {
-    cells[aliens[i]].classList.add("alien");
+    if (!aliensKilled.includes(i)) {
+      cells[aliens[i]].classList.add("alien");
+    }
   }
 }
 
@@ -64,7 +70,6 @@ setInterval(moveAliens, 500);
   SPACESHIP
   Move
 */
-
 let spaceshipIndex = 217;
 cells[spaceshipIndex].classList.add("spaceship");
 
@@ -86,7 +91,6 @@ function moveSpaceship(event) {
 document.addEventListener("keydown", moveSpaceship);
 
 /* Shoot */
-
 function shoot(event) {
   if (event.code !== "Space") return;
 
@@ -99,6 +103,21 @@ function shoot(event) {
 
     if (laserIndex < 0) {
       clearInterval(laserIntVal);
+      return;
+    }
+
+    /* Check if shoot alien */
+    if (cells[laserIndex].classList.contains("alien")) {
+      clearInterval(laserIntVal);
+      cells[laserIndex].classList.remove("alien", "laser");
+      cells[laserIndex].classList.add("boom");
+      setTimeout(function () {
+        cells[laserIndex].classList.remove("boom");
+      }, 200);
+
+      const killed = aliens.indexOf(laserIndex);
+      aliensKilled.push(killed);
+
       return;
     }
 
