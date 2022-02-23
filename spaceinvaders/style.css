@@ -5,8 +5,9 @@
 }
 
 .space-invaders.grid {
-  width: calc(var(--cell-size) * var(--grid-size));
-  height: calc(var(--cell-size) * var(--grid-size));
+  width: calc(var(--cell-size) * var(--grid-size) + 4px);
+  height: calc(var(--cell-size) * var(--grid-size) + 4px);
+  border: 2px solid white;
   display: flex;
   flex-wrap: wrap;
 }
@@ -37,8 +38,8 @@
 
 @media screen and (max-width: 800px) {
   .space-invaders.grid {
-    width: calc(var(--mobile-cell-size) * var(--grid-size));
-    height: calc(var(--mobile-cell-size) * var(--grid-size));
+    width: calc(var(--mobile-cell-size) * var(--grid-size) + 4px);
+    height: calc(var(--mobile-cell-size) * var(--grid-size) + 4px);
   }
 
   .space-invaders div {
